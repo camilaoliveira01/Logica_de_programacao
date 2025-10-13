@@ -1,87 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>Atividade 02 DOM</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
-
 <body>
-    <nav class="navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#inicio" class="menuLink">Início</a>
-            </li>
-            <li>
-                <a href="#sobremim" class="menuLink">Sobre mim</a>
-            </li>
-            <li>
-                <a href="#contato" class="menuLink">Contato</a>
-            </li>
-            <li>
-                <a href="#projetos" class="menuLink">Projetos</a>
-            </li>
-        </ul>
-
-    </nav>
-    <main id="inicio" class="cabecalho">
-            <img src="img1/camilavv.jpeg" alt="Foto de Camila" class="foto_perfil">
-            <h1>Camila de Oliveira Brazil</h1>
-            <p class="cabecalhosub">Estudante de Análise e Desenvolvimento de Sistemas</p>
-    </main>
-
-    <section id="sobremim" class="sobremim">
-        <h2 class="sobretitulo">Sobre mim</h2>
-        <div class="sobre-caixa">
-            <p class="sobre-paragrafo">
-                Sou uma jovem de 18 anos, atualmente curso ADS, tenho um curso técnico em Administração, <br> 
-                sou formada pelo Senac, possuo curso de informática e atualmente estou em busca do meu primeiro emprego.
-            </p>
+    <div class="container">
+        <h1>Cadastro de Alunos</h1>
+        
+        <div class="cadastro">
+            <input type="text" id="nome" placeholder="Nome do aluno">
+            <input type="number" id="nota" placeholder="Nota (0-10)" min="0" max="10">
+            <button onclick="cadastrarAluno()">Cadastrar aluno</button>
         </div>
-    </section>
 
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Meus Projetos</h2>
-        <div class="projetos-caixa">
-
-            <div class="projetos-card">
-                <img src="img1/lojaroupa.jpg" alt="projeto1" class="projetos-imagem">
-                <div class="caixa-textos-projetos">
-                 <h3 class="inf-projetos">Loja de roupas</h3>
-                 <p class="paragrafo-projetos">Oferecemos o equilíbrio perfeito entre as últimas tendências, qualidade impecável e preços justos, transformando o ato de se vestir em uma forma de expressão poderosa. Visite-nos e descubra o seu próximo look inesquecível, pois vestir-se bem é o primeiro passo para conquistar o dia.</p>
-                </div>
-            </div>
-
-            <div class="projetos-card">
-                <img src="img1/lojacasav.jpg" alt="projeto2" class="projetos-imagem">
-                <div class="caixa-textos-projetos">
-                 <h3 class="inf-projetos">Site de vendas de casas</h3>
-                 <p class="paragrafo-projetos">Com um vasto catálogo de imóveis cuidadosamente verificados, filtros avançados e informações detalhadas sobre bairros e vizinhanças, eliminamos a complicação da busca para que você foque apenas em imaginar sua nova vida.</p>
-                </div>
-            </div>
-
-            <div class="projetos-card">
-                <img src="img1/viagem.jpg" alt="projeto3" class="projetos-imagem">
-                <div class="caixa-textos-projetos">
-                 <h3 class="inf-projetos">Site de viagens</h3>
-                 <p class="paragrafo-projetos"> Com um sistema de comparação inteligente, garantia de menor preço e uma interface intuitiva, garantimos que sua única preocupação seja fazer as malas. Sua próxima aventura começa aqui, com a segurança e a economia que você merece.</p>
-                </div>
-            </div>
-
-
+        <div class="filtros">
+            <button onclick="mostrarTodos()">Mostrar todos os alunos</button>
+            <button onclick="mostrarAprovados()">Mostrar Alunos aprovados</button>
         </div>
-    </section>
 
-    <section id="contato" class="contato">
-        <h2 class="contatos-titulo">Entre em Contato</h2>
-        <div class="grupo-form">
-            <p class="contatos">
-                E-mail: brazilcamila8@gmail.com
-                Telefone: (11)915720710
-            </p>
-        </div>
-    </section>
+        <div id="listaAlunos" class="lista"></div>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
